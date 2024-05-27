@@ -1,6 +1,6 @@
 import http from "http";
 
-export default keepAlive = () => {
+export const keepAlive = () => {
   http
     .createServer((req, res) => {
       res.writeHead(200);
