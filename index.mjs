@@ -1,6 +1,6 @@
 import { Client, Events, IntentsBitField } from "discord.js";
 import { messageSendHandler } from "./messageSendHandler.mjs";
-import keepAlive from "./keepAlive.js";
+import keepAlive from "./keepAlive.mjs";
 
 const clientParams = {
   intents: [
