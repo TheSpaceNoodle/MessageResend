@@ -1,6 +1,7 @@
 import { Client, Events, IntentsBitField } from "discord.js";
 import { messageSendHandler } from "./messageSendHandler.mjs";
 import { keepAlive } from "./keepAlive.mjs";
+import { startServer } from "./server.mjs";
 
 const clientParams = {
   intents: [
@@ -16,4 +17,4 @@ const client = new Client(clientParams);
 client.on(Events.MessageCreate, messageSendHandler);
 
 client.login(process.env.TOKEN);
-keepAlive();
+startServer();

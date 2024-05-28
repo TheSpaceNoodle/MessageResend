@@ -3,7 +3,9 @@ import express from "express";
 const server = express();
 
 export const startServer = () => {
-  server.all("/", () => {});
+  server.all("/", (_, res) => {
+    res.send("Works");
+  });
 
-  return server.listen("3000", () => console.log("server is ready"));
+  return server.listen("8080", () => console.log("server is ready"));
 };
